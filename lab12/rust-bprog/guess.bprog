@@ -1,0 +1,96 @@
+# Guess the Number game in BProg
+
+# Computer picks a number, and the player tries to guess it
+
+# Welcome message
+
+" Welcome to Guess the Number! " print
+" I'm thinking of a number between 1 and 100. " print
+" Try to guess it in as few attempts as possible! " print
+
+# Define variables using functions for better reliability
+
+secret\_num { 42 } fun
+attempts\_count { 1 } fun
+
+# Function to increment the attempts counter
+
+increment\_attempts {
+attempts\_count 1 + "attempts\_count" :=
+} fun
+
+# Function to get user input as an integer
+
+getNumber {
+" Enter your guess: " print
+read parseInteger
+} fun
+
+# Main game loop
+
+{
+\# Get player's guess
+getNumber player\_guess :=
+
+```
+# Compare guess with secret
+player_guess secret_num ==
+{
+    # Correct guess
+    " Congratulations! You guessed the correct number! " print
+    " It took you " attempts_count " attempts. " + + print
+    True  # Exit condition - end the game
+}
+{
+    # Wrong guess - give a hint
+    player_guess secret_num >
+    {
+        " Too high! Try again. " print
+    }
+    {
+        " Too low! Try again. " print
+    } if
+    
+    # Increment attempt counter
+    increment_attempts
+    
+    False  # Continue the loop
+} if
+```
+
+} {
+\# Break condition
+dup not  # Check if the top of the stack is true
+} loop
+
+# Return value to satisfy interpreter
+
+attempts\_count
+
+# Prelude for BProg
+
+# Standard library functions that are automatically loaded
+
+# Stack combinators
+
+swap2 { swap swap } fun
+dup2 { dup swap dup swap swap } fun
+over { swap dup swap } fun
+
+# Arithmetic helpers
+
+inc { 1 + } fun
+dec { 1 - } fun
+square { dup \* } fun
+cube { dup dup \* \* } fun
+
+# List helpers
+
+# Correct order: first the name, then the quotation definition
+
+sum { 0 swap { + } foldl } fun
+product { 1 swap { \* } foldl } fun
+
+# Return value to satisfy the interpreter
+
+True

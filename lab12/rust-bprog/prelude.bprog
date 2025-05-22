@@ -1,0 +1,21 @@
+# Prelude for BProg
+# Standard library functions that are automatically loaded
+
+# Stack combinators
+swap2 { swap swap } fun
+dup2 { dup swap dup swap swap } fun
+over { swap dup swap } fun
+
+# Arithmetic helpers
+inc { 1 + } fun
+dec { 1 - } fun
+square { dup * } fun
+cube { dup dup * * } fun
+
+# List helpers
+# Correct order: first the name, then the quotation definition
+sum { 0 swap { + } foldl } fun
+product { 1 swap { * } foldl } fun
+
+# Return value to satisfy the interpreter
+True

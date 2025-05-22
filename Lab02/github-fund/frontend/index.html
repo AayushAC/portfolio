@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Funding System</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+
+
+</head>
+<body>
+    <h1>Decentralized Funding System</h1>
+
+    <!-- Section for Funders -->
+    <h2>Funders</h2>
+    <button id="connectButton">Connect Wallet</button>
+    <br>
+    <input type="number" id="issueId" placeholder="Issue ID">
+    <input type="number" id="bountyAmount" placeholder="Bounty Amount">
+    <button id="allocateBounty">Allocate Bounty</button>
+
+    <!-- Section for Developers -->
+    <h2>Developers</h2>
+    <button id="viewBounties">View Bounties</button>
+    <br>
+    <button id="requestPayout">Request Payout</button>
+
+    <!-- Section for Validators -->
+    <h2>Validators</h2>
+    <button id="approvePayment">Approve Payment</button>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>

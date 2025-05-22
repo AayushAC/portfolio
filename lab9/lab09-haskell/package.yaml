@@ -1,0 +1,49 @@
+name:                lab09-haskell
+version:             0.1.0.0
+github:              "githubuser/lab09-haskell"
+license:             BSD-3-Clause
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2025 Author name here"
+
+dependencies:
+  - base >= 4.7 && < 5
+  - servant
+  - servant-server
+  - warp
+  - aeson
+  - http-conduit
+  - text
+  - bytestring
+  - blaze-html ==0.9.2.0  
+  - http-client >= 0.7.19  
+  - http-client-tls >= 0.3.6.4  
+  - crypton-connection  
+  - tls 
+  - dotenv
+
+
+library:
+  source-dirs: src
+
+executables:
+  lab09-haskell-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab09-haskell
+
+tests:
+  lab09-haskell-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab09-haskell

@@ -1,0 +1,8 @@
+# Function definition and usage test
+# Define a simple double function and use it
+
+# Define the double function - correct order is symbol quotation fun
+double { 2 * } fun
+
+# Use the function to double 5
+5 double

@@ -1,0 +1,21 @@
+[package]
+name = "lab09_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# HTTP server framework
+axum = "0.7"
+
+# Tokio async runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# JSON (de)serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# HTTP client for announcements
+reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
+
+# (Optional) dotenv support
+dotenv = "0.15"

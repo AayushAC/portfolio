@@ -1,0 +1,78 @@
+# Haskell specific .gitignore
+
+# Stack
+.stack-work/
+stack.yaml.lock
+
+# Cabal
+dist
+dist-newstyle/
+cabal-dev/
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.project.local
+.ghc.environment.*
+
+# Haskell Program Coverage
+.hpc/
+*.tix
+
+# Cabal build-info
+.setup-config
+.HTF/
+
+# GHC files
+*.hi
+*.o
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+*.prof
+*.aux
+*.hp
+*.eventlog
+
+# GHCi
+.ghci
+
+# Compiled executables
+*.exe
+
+# Program generated files
+*.swp
+*~
+
+# IDE specific files
+.hie/
+.psc-ide-port
+.idea/
+.vscode/
+*.iml
+
+# OS specific files
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# HLS (Haskell Language Server)
+hie.yaml
+
+# IHaskell
+.ipynb_checkpoints/
+
+# TH files
+/autogen/
+
+# Shake build system
+.shake/
+
+# Nix
+result
+result-*
+
+# Direnv
+.direnv/
+.envrc

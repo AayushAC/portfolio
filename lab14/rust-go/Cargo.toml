@@ -1,0 +1,9 @@
+[package]
+name = "go-game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = { version = "0.9.0", features = ["canvas", "debug"] }
+rand = "0.8.5"
+nom = "7.1.3"

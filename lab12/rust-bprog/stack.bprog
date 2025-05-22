@@ -1,0 +1,2 @@
+# Official test case - stack operations
+10 20 swap pop

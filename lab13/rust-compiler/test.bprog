@@ -1,0 +1,14 @@
+# Test file for BProg compiler
+# Simple arithmetic operations
+
+# Define a simple function to double a number
+double { 2 * } fun
+
+# Use the function to double 5
+5 double
+
+# Add two numbers
+10 20 +
+
+# Print the result
+print

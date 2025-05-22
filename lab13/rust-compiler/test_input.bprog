@@ -1,0 +1,4 @@
+# Comprehensive test 
+double { 2 * } fun 
+triple { 3 * } fun 
+7 double triple + 

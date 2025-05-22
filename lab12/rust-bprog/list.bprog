@@ -1,0 +1,14 @@
+# List operations demonstration
+# Works with the fixed prelude
+
+# Create a list of numbers
+[ 1 2 3 4 5 ]
+
+# Make a copy so we can see it
+dup
+print
+
+# Map: multiply each by 2
+{ 2 * } map
+
+# The final result [2,4,6,8,10] remains on the stack
